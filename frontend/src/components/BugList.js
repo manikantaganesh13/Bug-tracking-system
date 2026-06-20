@@ -85,12 +85,6 @@ const BugList = () => {
   };
 
   const columns = [
-    // {
-    //   title: 'ID',
-    //   dataIndex: 'id',
-    //   key: 'id',
-    //   width: 80,
-    // },
     {
       title: "S.No",
       key: "serialNo",
@@ -223,13 +217,6 @@ const BugList = () => {
         dataSource={bugs}
         loading={loading}
         rowKey="id"
-        // pagination={{
-        //   pageSize: 10,
-        //   showSizeChanger: true,
-        //   showQuickJumper: true,
-        //   showTotal: (total, range) =>
-        //     `${range[0]}-${range[1]} of ${total} bugs`,
-        // }}
         pagination={{
           ...tablePagination,
           showSizeChanger: true,
