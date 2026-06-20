@@ -36,41 +36,6 @@ A comprehensive Java full-stack bug tracking system built with Spring Boot and R
 - **Axios**
 - **Recharts** (for charts)
 
-## Database Schema
-
-### Users Table
-- id (Primary Key)
-- name
-- email (Unique)
-- password (Encrypted)
-- role (ADMIN/DEVELOPER/TESTER)
-- created_date
-
-### Projects Table
-- id (Primary Key)
-- name
-- description
-- created_date
-
-### Bugs Table
-- id (Primary Key)
-- title
-- description
-- severity (LOW/MEDIUM/HIGH/CRITICAL)
-- priority (LOW/MEDIUM/HIGH/URGENT)
-- status (OPEN/ASSIGNED/IN_PROGRESS/RESOLVED/CLOSED/REOPENED/REJECTED)
-- project_id (Foreign Key)
-- created_by (Foreign Key to Users)
-- assigned_to (Foreign Key to Users)
-- created_date
-- updated_date
-
-### Comments Table
-- id (Primary Key)
-- comment_text
-- bug_id (Foreign Key)
-- user_id (Foreign Key)
-- created_date
 
 ## Setup Instructions
 
@@ -175,24 +140,6 @@ The frontend will start on `http://localhost:3000`
 - Add comments to bugs
 - View dashboard statistics
 
-## Default Users
-
-After starting the application, you can create users through the registration endpoint or directly in the database. Here are some example users you might want to create:
-
-**Admin User:**
-- Email: admin@example.com
-- Password: admin123
-- Role: ADMIN
-
-**Developer User:**
-- Email: dev@example.com
-- Password: dev123
-- Role: DEVELOPER
-
-**Tester User:**
-- Email: tester@example.com
-- Password: tester123
-- Role: TESTER
 
 ## Running the Application
 
@@ -201,25 +148,3 @@ After starting the application, you can create users through the registration en
 3. Start the React frontend application
 4. Open `http://localhost:3000` in your browser
 5. Login with your credentials or create a new user
-
-## Screenshots
-
-The application includes:
-- Login page with secure authentication
-- Dashboard with real-time statistics and charts
-- Bug management with search and filtering
-- Project management interface
-- User management (Admin only)
-- Detailed bug view with comments
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License.
